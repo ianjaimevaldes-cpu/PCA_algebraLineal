@@ -45,10 +45,11 @@ def leer_datos():
     plt.grid(alpha=0.3)
 
     plt.savefig("Data/ScreePlot-png", dpi =150, bbox_inches="tight")
+    plt.close()
 
     PC1 = X_estand @ autovectores[:, 0]
     PC2 = X_estand @ autovectores[:, 1]
-    PC3 = C_estand @ autovectores[:, 3]
+    PC3 = X_estand @ autovectores[:, 2]
 
     #graficar
 
